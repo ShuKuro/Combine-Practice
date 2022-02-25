@@ -16,6 +16,10 @@ struct ContentView: View {
         NavigationLink("API with Combine") {
           SimpleAPIView()
         }
+        
+        NavigationLink("API with Combine and Alamofire") {
+          AFCombineView()
+        }
       }
     }
   }

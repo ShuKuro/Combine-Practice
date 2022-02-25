@@ -17,6 +17,10 @@
 		A2D31AEE27C7EA90000CA792 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31ADF27C7EA90000CA792 /* APIClient.swift */; };
 		A2D31AFB27C7EF53000CA792 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A2D31AFA27C7EF53000CA792 /* ComposableArchitecture */; };
 		A2D31AFD27C7F2FA000CA792 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31AFC27C7F2FA000CA792 /* User.swift */; };
+		A2D31B0327C7F3BA000CA792 /* AFCombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31AFF27C7F3BA000CA792 /* AFCombineViewModel.swift */; };
+		A2D31B0427C7F3BA000CA792 /* AFCombineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0027C7F3BA000CA792 /* AFCombineModel.swift */; };
+		A2D31B0527C7F3BA000CA792 /* ApiAccessPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0127C7F3BA000CA792 /* ApiAccessPublisher.swift */; };
+		A2D31B0627C7F3BA000CA792 /* AFCombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0227C7F3BA000CA792 /* AFCombineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		A2D31ADE27C7EA90000CA792 /* SimpleAPIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAPIViewModel.swift; sourceTree = "<group>"; };
 		A2D31ADF27C7EA90000CA792 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A2D31AFC27C7F2FA000CA792 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A2D31AFF27C7F3BA000CA792 /* AFCombineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCombineViewModel.swift; sourceTree = "<group>"; };
+		A2D31B0027C7F3BA000CA792 /* AFCombineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCombineModel.swift; sourceTree = "<group>"; };
+		A2D31B0127C7F3BA000CA792 /* ApiAccessPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiAccessPublisher.swift; sourceTree = "<group>"; };
+		A2D31B0227C7F3BA000CA792 /* AFCombineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCombineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			children = (
 				A2D31AC127C14D98000CA792 /* Combine_PracticeApp.swift */,
 				A2D31AC327C14D98000CA792 /* ContentView.swift */,
+				A2D31AFE27C7F395000CA792 /* UsingAlamofire */,
 				A2D31AFC27C7F2FA000CA792 /* User.swift */,
 				A2D31ADC27C7EA90000CA792 /* SimpleCombineAPI */,
 				A2D31AC527C14D99000CA792 /* Assets.xcassets */,
@@ -89,6 +98,17 @@
 				A2D31ADF27C7EA90000CA792 /* APIClient.swift */,
 			);
 			path = SimpleCombineAPI;
+			sourceTree = "<group>";
+		};
+		A2D31AFE27C7F395000CA792 /* UsingAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				A2D31B0027C7F3BA000CA792 /* AFCombineModel.swift */,
+				A2D31B0227C7F3BA000CA792 /* AFCombineView.swift */,
+				A2D31AFF27C7F3BA000CA792 /* AFCombineViewModel.swift */,
+				A2D31B0127C7F3BA000CA792 /* ApiAccessPublisher.swift */,
+			);
+			path = UsingAlamofire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,10 +190,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D31AC427C14D98000CA792 /* ContentView.swift in Sources */,
+				A2D31B0327C7F3BA000CA792 /* AFCombineViewModel.swift in Sources */,
 				A2D31AEE27C7EA90000CA792 /* APIClient.swift in Sources */,
 				A2D31AFD27C7F2FA000CA792 /* User.swift in Sources */,
+				A2D31B0427C7F3BA000CA792 /* AFCombineModel.swift in Sources */,
+				A2D31B0627C7F3BA000CA792 /* AFCombineView.swift in Sources */,
 				A2D31AED27C7EA90000CA792 /* SimpleAPIViewModel.swift in Sources */,
 				A2D31AEC27C7EA90000CA792 /* SimpleAPIView.swift in Sources */,
+				A2D31B0527C7F3BA000CA792 /* ApiAccessPublisher.swift in Sources */,
 				A2D31AC227C14D98000CA792 /* Combine_PracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
