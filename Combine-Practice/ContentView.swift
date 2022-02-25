@@ -20,6 +20,20 @@ struct ContentView: View {
         NavigationLink("API with Combine and Alamofire") {
           AFCombineView()
         }
+
+        NavigationLink("API with TCA") {
+          TCASampleView(
+            store:
+              Store(
+                initialState: AppState(),
+                reducer: appReducer,
+                environment: AppEnvironment(
+                  userClient: .live,
+                  mainQueue: .main
+                )
+              )
+          )
+        }
       }
     }
   }

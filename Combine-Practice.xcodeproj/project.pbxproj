@@ -21,6 +21,12 @@
 		A2D31B0427C7F3BA000CA792 /* AFCombineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0027C7F3BA000CA792 /* AFCombineModel.swift */; };
 		A2D31B0527C7F3BA000CA792 /* ApiAccessPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0127C7F3BA000CA792 /* ApiAccessPublisher.swift */; };
 		A2D31B0627C7F3BA000CA792 /* AFCombineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0227C7F3BA000CA792 /* AFCombineView.swift */; };
+		A2D31B0E27C8C06B000CA792 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0827C8C06B000CA792 /* UserClient.swift */; };
+		A2D31B0F27C8C06B000CA792 /* Error+Equality.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0927C8C06B000CA792 /* Error+Equality.swift */; };
+		A2D31B1027C8C06B000CA792 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0A27C8C06B000CA792 /* Provider.swift */; };
+		A2D31B1127C8C06B000CA792 /* TCASampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0B27C8C06B000CA792 /* TCASampleView.swift */; };
+		A2D31B1227C8C06B000CA792 /* Provider+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0C27C8C06B000CA792 /* Provider+User.swift */; };
+		A2D31B1327C8C06B000CA792 /* ProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0D27C8C06B000CA792 /* ProviderError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		A2D31B0027C7F3BA000CA792 /* AFCombineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCombineModel.swift; sourceTree = "<group>"; };
 		A2D31B0127C7F3BA000CA792 /* ApiAccessPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiAccessPublisher.swift; sourceTree = "<group>"; };
 		A2D31B0227C7F3BA000CA792 /* AFCombineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCombineView.swift; sourceTree = "<group>"; };
+		A2D31B0827C8C06B000CA792 /* UserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
+		A2D31B0927C8C06B000CA792 /* Error+Equality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error+Equality.swift"; sourceTree = "<group>"; };
+		A2D31B0A27C8C06B000CA792 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		A2D31B0B27C8C06B000CA792 /* TCASampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCASampleView.swift; sourceTree = "<group>"; };
+		A2D31B0C27C8C06B000CA792 /* Provider+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Provider+User.swift"; sourceTree = "<group>"; };
+		A2D31B0D27C8C06B000CA792 /* ProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +85,10 @@
 			children = (
 				A2D31AC127C14D98000CA792 /* Combine_PracticeApp.swift */,
 				A2D31AC327C14D98000CA792 /* ContentView.swift */,
-				A2D31AFE27C7F395000CA792 /* UsingAlamofire */,
-				A2D31AFC27C7F2FA000CA792 /* User.swift */,
 				A2D31ADC27C7EA90000CA792 /* SimpleCombineAPI */,
+				A2D31AFE27C7F395000CA792 /* UsingAlamofire */,
+				A2D31B0727C8C06B000CA792 /* TCAAPI */,
+				A2D31AFC27C7F2FA000CA792 /* User.swift */,
 				A2D31AC527C14D99000CA792 /* Assets.xcassets */,
 				A2D31AC727C14D99000CA792 /* Preview Content */,
 			);
@@ -109,6 +122,19 @@
 				A2D31B0127C7F3BA000CA792 /* ApiAccessPublisher.swift */,
 			);
 			path = UsingAlamofire;
+			sourceTree = "<group>";
+		};
+		A2D31B0727C8C06B000CA792 /* TCAAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A2D31B0827C8C06B000CA792 /* UserClient.swift */,
+				A2D31B0927C8C06B000CA792 /* Error+Equality.swift */,
+				A2D31B0A27C8C06B000CA792 /* Provider.swift */,
+				A2D31B0B27C8C06B000CA792 /* TCASampleView.swift */,
+				A2D31B0C27C8C06B000CA792 /* Provider+User.swift */,
+				A2D31B0D27C8C06B000CA792 /* ProviderError.swift */,
+			);
+			path = TCAAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,12 +218,18 @@
 				A2D31AC427C14D98000CA792 /* ContentView.swift in Sources */,
 				A2D31B0327C7F3BA000CA792 /* AFCombineViewModel.swift in Sources */,
 				A2D31AEE27C7EA90000CA792 /* APIClient.swift in Sources */,
+				A2D31B1327C8C06B000CA792 /* ProviderError.swift in Sources */,
 				A2D31AFD27C7F2FA000CA792 /* User.swift in Sources */,
 				A2D31B0427C7F3BA000CA792 /* AFCombineModel.swift in Sources */,
 				A2D31B0627C7F3BA000CA792 /* AFCombineView.swift in Sources */,
+				A2D31B0F27C8C06B000CA792 /* Error+Equality.swift in Sources */,
 				A2D31AED27C7EA90000CA792 /* SimpleAPIViewModel.swift in Sources */,
 				A2D31AEC27C7EA90000CA792 /* SimpleAPIView.swift in Sources */,
+				A2D31B1227C8C06B000CA792 /* Provider+User.swift in Sources */,
+				A2D31B1127C8C06B000CA792 /* TCASampleView.swift in Sources */,
+				A2D31B1027C8C06B000CA792 /* Provider.swift in Sources */,
 				A2D31B0527C7F3BA000CA792 /* ApiAccessPublisher.swift in Sources */,
+				A2D31B0E27C8C06B000CA792 /* UserClient.swift in Sources */,
 				A2D31AC227C14D98000CA792 /* Combine_PracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
