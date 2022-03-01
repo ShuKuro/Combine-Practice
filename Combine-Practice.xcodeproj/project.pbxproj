@@ -27,6 +27,9 @@
 		A2D31B1127C8C06B000CA792 /* TCASampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0B27C8C06B000CA792 /* TCASampleView.swift */; };
 		A2D31B1227C8C06B000CA792 /* Provider+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0C27C8C06B000CA792 /* Provider+User.swift */; };
 		A2D31B1327C8C06B000CA792 /* ProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B0D27C8C06B000CA792 /* ProviderError.swift */; };
+		A2D31B1627C94B5A000CA792 /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B1527C94B5A000CA792 /* CheckListView.swift */; };
+		A2D31B1827C94B63000CA792 /* CheckRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B1727C94B63000CA792 /* CheckRowView.swift */; };
+		A2D31B1A27CA1809000CA792 /* CheckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B1927CA1809000CA792 /* CheckDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		A2D31B0B27C8C06B000CA792 /* TCASampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCASampleView.swift; sourceTree = "<group>"; };
 		A2D31B0C27C8C06B000CA792 /* Provider+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Provider+User.swift"; sourceTree = "<group>"; };
 		A2D31B0D27C8C06B000CA792 /* ProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderError.swift; sourceTree = "<group>"; };
+		A2D31B1527C94B5A000CA792 /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
+		A2D31B1727C94B63000CA792 /* CheckRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckRowView.swift; sourceTree = "<group>"; };
+		A2D31B1927CA1809000CA792 /* CheckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				A2D31ADC27C7EA90000CA792 /* SimpleCombineAPI */,
 				A2D31AFE27C7F395000CA792 /* UsingAlamofire */,
 				A2D31B0727C8C06B000CA792 /* TCAAPI */,
+				A2D31B1427C94B39000CA792 /* TCASample */,
 				A2D31AFC27C7F2FA000CA792 /* User.swift */,
 				A2D31AC527C14D99000CA792 /* Assets.xcassets */,
 				A2D31AC727C14D99000CA792 /* Preview Content */,
@@ -127,14 +134,24 @@
 		A2D31B0727C8C06B000CA792 /* TCAAPI */ = {
 			isa = PBXGroup;
 			children = (
+				A2D31B0B27C8C06B000CA792 /* TCASampleView.swift */,
 				A2D31B0827C8C06B000CA792 /* UserClient.swift */,
 				A2D31B0927C8C06B000CA792 /* Error+Equality.swift */,
 				A2D31B0A27C8C06B000CA792 /* Provider.swift */,
-				A2D31B0B27C8C06B000CA792 /* TCASampleView.swift */,
 				A2D31B0C27C8C06B000CA792 /* Provider+User.swift */,
 				A2D31B0D27C8C06B000CA792 /* ProviderError.swift */,
 			);
 			path = TCAAPI;
+			sourceTree = "<group>";
+		};
+		A2D31B1427C94B39000CA792 /* TCASample */ = {
+			isa = PBXGroup;
+			children = (
+				A2D31B1527C94B5A000CA792 /* CheckListView.swift */,
+				A2D31B1727C94B63000CA792 /* CheckRowView.swift */,
+				A2D31B1927CA1809000CA792 /* CheckDetailView.swift */,
+			);
+			path = TCASample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +244,12 @@
 				A2D31AEC27C7EA90000CA792 /* SimpleAPIView.swift in Sources */,
 				A2D31B1227C8C06B000CA792 /* Provider+User.swift in Sources */,
 				A2D31B1127C8C06B000CA792 /* TCASampleView.swift in Sources */,
+				A2D31B1A27CA1809000CA792 /* CheckDetailView.swift in Sources */,
+				A2D31B1627C94B5A000CA792 /* CheckListView.swift in Sources */,
 				A2D31B1027C8C06B000CA792 /* Provider.swift in Sources */,
 				A2D31B0527C7F3BA000CA792 /* ApiAccessPublisher.swift in Sources */,
 				A2D31B0E27C8C06B000CA792 /* UserClient.swift in Sources */,
+				A2D31B1827C94B63000CA792 /* CheckRowView.swift in Sources */,
 				A2D31AC227C14D98000CA792 /* Combine_PracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

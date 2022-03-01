@@ -34,6 +34,19 @@ struct ContentView: View {
               )
           )
         }
+        
+        NavigationLink("TCA Sample") {
+          CheckListView(
+            store:
+              Store(
+                initialState: CheckListState(),
+                reducer: checkListReducer,
+                environment: CheckListEnvironment(
+                  mainQueue: .main
+                )
+              )
+          )
+        }
       }
     }
   }
