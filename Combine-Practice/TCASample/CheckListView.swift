@@ -19,11 +19,13 @@ enum CheckListAction {
   case check(index: UUID, action: CheckRowAction)
   case addButtonTapped
   case updateCountButton
+  case fetchCheckResponse(Result<[Check], ProviderError>)
 }
 
 struct CheckListEnvironment {
+  var checkListClient: CheckListClient
   var mainQueue: AnySchedulerOf<DispatchQueue>
-//  var uuid: () -> UUID
+  var uuid: () -> UUID
 }
 
 let checkListReducer = Reducer<CheckListState, CheckListAction, CheckListEnvironment>.combine(
@@ -34,12 +36,9 @@ let checkListReducer = Reducer<CheckListState, CheckListAction, CheckListEnviron
   ), Reducer { state, action, environment in
     switch action {
     case .onAppear:
-      // TODO: APIで取得予定
-      state.checks = [
-        CheckState(id: UUID(), isChecked: false, title: "Buy MacBook Pro 14inch", memo: "Apple M1 Max"),
-        CheckState(id: UUID(), isChecked: false, title: "Buy ice cream", memo: "31"),
-        CheckState(id: UUID(), isChecked: true, title: "Check E-Mail", memo: "Reply")
-      ]
+      return environment.checkListClient.fetch()
+        .receive(on: environment.mainQueue)
+        .catchToEffect(CheckListAction.fetchCheckResponse)
       
       return Effect(value: .updateCountButton)
       
@@ -55,6 +54,22 @@ let checkListReducer = Reducer<CheckListState, CheckListAction, CheckListEnviron
       
     case .updateCountButton:
       state.selectedCount = state.checks.filter { $0.isChecked }.count
+      return .none
+      
+    case .fetchCheckResponse(.success(let response)):
+      let checks = IdentifiedArrayOf<CheckState>(
+        uniqueElements: response.map {
+          CheckState(
+            id: environment.uuid(),
+            isChecked: false,
+            check: $0
+          )
+        }
+      )
+      state.checks = checks
+      return .none
+      
+    case .fetchCheckResponse(.failure):
       return .none
     }
   }
@@ -73,7 +88,7 @@ struct CheckListView: View {
             content: CheckRowView.init(store:)
           )
         }
-        .navigationTitle("Todos")
+        .navigationTitle("CheckList")
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
             Button("Add") {
@@ -116,7 +131,9 @@ struct CheckListView_Previews: PreviewProvider {
             initialState: CheckListState(),
             reducer: checkListReducer,
             environment: CheckListEnvironment(
-              mainQueue: .main
+              checkListClient: .mock(),
+              mainQueue: .main,
+              uuid: UUID.init
             )
           )
         )

@@ -30,6 +30,8 @@
 		A2D31B1627C94B5A000CA792 /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B1527C94B5A000CA792 /* CheckListView.swift */; };
 		A2D31B1827C94B63000CA792 /* CheckRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B1727C94B63000CA792 /* CheckRowView.swift */; };
 		A2D31B1A27CA1809000CA792 /* CheckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B1927CA1809000CA792 /* CheckDetailView.swift */; };
+		A2D31B1D27D0A80B000CA792 /* CheckListClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B1C27D0A80B000CA792 /* CheckListClient.swift */; };
+		A2D31B1F27D0A855000CA792 /* Provider+CheckList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D31B1E27D0A855000CA792 /* Provider+CheckList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		A2D31B1527C94B5A000CA792 /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
 		A2D31B1727C94B63000CA792 /* CheckRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckRowView.swift; sourceTree = "<group>"; };
 		A2D31B1927CA1809000CA792 /* CheckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDetailView.swift; sourceTree = "<group>"; };
+		A2D31B1C27D0A80B000CA792 /* CheckListClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListClient.swift; sourceTree = "<group>"; };
+		A2D31B1E27D0A855000CA792 /* Provider+CheckList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Provider+CheckList.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				A2D31B0727C8C06B000CA792 /* TCAAPI */,
 				A2D31B1427C94B39000CA792 /* TCASample */,
 				A2D31AFC27C7F2FA000CA792 /* User.swift */,
+				A2D31B1B27D0A41F000CA792 /* Provider */,
 				A2D31AC527C14D99000CA792 /* Assets.xcassets */,
 				A2D31AC727C14D99000CA792 /* Preview Content */,
 			);
@@ -136,10 +141,6 @@
 			children = (
 				A2D31B0B27C8C06B000CA792 /* TCASampleView.swift */,
 				A2D31B0827C8C06B000CA792 /* UserClient.swift */,
-				A2D31B0927C8C06B000CA792 /* Error+Equality.swift */,
-				A2D31B0A27C8C06B000CA792 /* Provider.swift */,
-				A2D31B0C27C8C06B000CA792 /* Provider+User.swift */,
-				A2D31B0D27C8C06B000CA792 /* ProviderError.swift */,
 			);
 			path = TCAAPI;
 			sourceTree = "<group>";
@@ -150,8 +151,21 @@
 				A2D31B1527C94B5A000CA792 /* CheckListView.swift */,
 				A2D31B1727C94B63000CA792 /* CheckRowView.swift */,
 				A2D31B1927CA1809000CA792 /* CheckDetailView.swift */,
+				A2D31B1C27D0A80B000CA792 /* CheckListClient.swift */,
 			);
 			path = TCASample;
+			sourceTree = "<group>";
+		};
+		A2D31B1B27D0A41F000CA792 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				A2D31B0A27C8C06B000CA792 /* Provider.swift */,
+				A2D31B0C27C8C06B000CA792 /* Provider+User.swift */,
+				A2D31B1E27D0A855000CA792 /* Provider+CheckList.swift */,
+				A2D31B0D27C8C06B000CA792 /* ProviderError.swift */,
+				A2D31B0927C8C06B000CA792 /* Error+Equality.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +255,7 @@
 				A2D31B0627C7F3BA000CA792 /* AFCombineView.swift in Sources */,
 				A2D31B0F27C8C06B000CA792 /* Error+Equality.swift in Sources */,
 				A2D31AED27C7EA90000CA792 /* SimpleAPIViewModel.swift in Sources */,
+				A2D31B1D27D0A80B000CA792 /* CheckListClient.swift in Sources */,
 				A2D31AEC27C7EA90000CA792 /* SimpleAPIView.swift in Sources */,
 				A2D31B1227C8C06B000CA792 /* Provider+User.swift in Sources */,
 				A2D31B1127C8C06B000CA792 /* TCASampleView.swift in Sources */,
@@ -248,6 +263,7 @@
 				A2D31B1627C94B5A000CA792 /* CheckListView.swift in Sources */,
 				A2D31B1027C8C06B000CA792 /* Provider.swift in Sources */,
 				A2D31B0527C7F3BA000CA792 /* ApiAccessPublisher.swift in Sources */,
+				A2D31B1F27D0A855000CA792 /* Provider+CheckList.swift in Sources */,
 				A2D31B0E27C8C06B000CA792 /* UserClient.swift in Sources */,
 				A2D31B1827C94B63000CA792 /* CheckRowView.swift in Sources */,
 				A2D31AC227C14D98000CA792 /* Combine_PracticeApp.swift in Sources */,

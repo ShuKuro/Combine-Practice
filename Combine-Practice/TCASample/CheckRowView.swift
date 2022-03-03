@@ -11,8 +11,13 @@ import ComposableArchitecture
 
 struct CheckState: Equatable, Identifiable {
   var id: UUID
-  var isChecked: Bool = false
-  var title: String
+  var isChecked: Bool
+  var check: Check
+}
+
+struct Check: Codable, Equatable, Identifiable {
+  var id: Int
+  var name: String
   var memo: String
 }
 
@@ -27,6 +32,7 @@ struct CheckRowEnvironment {
 let checkRowReducer = Reducer<CheckState, CheckRowAction, CheckRowEnvironment> { state, action, environment in
   switch action {
   case .checkboxTapped:
+    // TODO: チェック状態の保存
     state.isChecked.toggle()
     return .none
   }
@@ -48,10 +54,10 @@ struct CheckRowView: View {
           .buttonStyle(.plain)
           
           VStack(alignment: .leading, spacing: 4) {
-            Text(viewStore.title)
+            Text(viewStore.check.name)
               .font(.system(size: 16))
             
-            Text(viewStore.memo)
+            Text(viewStore.check.memo)
               .foregroundColor(.gray)
               .font(.system(size: 12))
           }
@@ -88,8 +94,8 @@ struct CheckRowView_Previews: PreviewProvider {
         initialState:
           CheckState(
             id: UUID(),
-            title: "title",
-            memo: "memo"
+            isChecked: false,
+            check: Check(id: 0, name: "name", memo: "memo")
           ),
         reducer: checkRowReducer,
         environment: CheckRowEnvironment()

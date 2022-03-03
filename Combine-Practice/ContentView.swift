@@ -42,7 +42,9 @@ struct ContentView: View {
                 initialState: CheckListState(),
                 reducer: checkListReducer,
                 environment: CheckListEnvironment(
-                  mainQueue: .main
+                  checkListClient: .live,
+                  mainQueue: .main,
+                  uuid: UUID.init
                 )
               )
           )

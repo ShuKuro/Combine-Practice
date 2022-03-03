@@ -44,7 +44,7 @@ struct CheckDetailView_Previews: PreviewProvider {
     CheckDetailView(
       store: Store(
         initialState: DetailState(
-          check: CheckState(id: UUID(), isChecked: false, title: "title", memo: "memo")
+          check: CheckState(id: UUID(), isChecked: false, check: Check(id: 0, name: "name", memo: "memo"))
         ),
         reducer: detailReducer,
         environment: DetailEnvironment()
