@@ -20,35 +20,6 @@ struct ContentView: View {
         NavigationLink("API with Combine and Alamofire") {
           AFCombineView()
         }
-
-        NavigationLink("API with TCA") {
-          TCASampleView(
-            store:
-              Store(
-                initialState: AppState(),
-                reducer: appReducer,
-                environment: AppEnvironment(
-                  userClient: .live,
-                  mainQueue: .main
-                )
-              )
-          )
-        }
-        
-        NavigationLink("TCA Sample") {
-          CheckListView(
-            store:
-              Store(
-                initialState: CheckListState(),
-                reducer: checkListReducer,
-                environment: CheckListEnvironment(
-                  checkListClient: .live,
-                  mainQueue: .main,
-                  uuid: UUID.init
-                )
-              )
-          )
-        }
       }
     }
   }
